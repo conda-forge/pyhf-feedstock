@@ -1,5 +1,5 @@
 {% set name = "pyhf" %}
-{% set version = "0.4.4" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c7c29e66ba1994d475ae5e5ad8743c7a04cae120f3d8c10d41892a99e2560307
+  sha256: 36a323e29ae5bdabc64201fa27a36b2e63df1da5d218c7463bda233c38cf5709
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyhf = pyhf.cli:cli
 
@@ -42,7 +42,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: '(partial) pure Python HistFactory implementation'
+  summary: (partial) pure Python HistFactory implementation
 
   description: |
     The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
