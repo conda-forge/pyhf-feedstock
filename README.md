@@ -5,9 +5,13 @@ Home: https://github.com/scikit-hep/pyhf
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyhf-feedstock/blob/master/LICENSE.txt)
 
 Summary: (partial) pure Python HistFactory implementation
+
+Development: https://github.com/scikit-hep/pyhf
+
+Documentation: https://scikit-hep.org/pyhf/
 
 The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
 of its implementation in ROOT and sometimes, it's useful to be able to run
