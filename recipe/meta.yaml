@@ -25,11 +25,11 @@ requirements:
   run:
     - python
     - scipy >=1.4.0
-    - click >=6.0
-    - tqdm
+    - click >=7.0
+    - tqdm >=4.56
     - jsonschema >=3.2.0
-    - jsonpatch
-    - pyyaml
+    - jsonpatch >=1.23
+    - pyyaml >=5.1
 
 test:
   imports:
