@@ -42,7 +42,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: (partial) pure Python HistFactory implementation
+  summary: pure-Python HistFactory implementation
 
   description: |
     The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
@@ -55,7 +55,7 @@ about:
     of new physics" [arXiv:1007.1727]. The aim is also to support modern
     computational graph libraries such as PyTorch and TensorFlow in order to
     make use of features such as autodifferentiation and GPU acceleration.
-  doc_url: https://scikit-hep.org/pyhf/
+  doc_url: https://pyhf.readthedocs.io/
   dev_url: https://github.com/scikit-hep/pyhf
 
 extra:
