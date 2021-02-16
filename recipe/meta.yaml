@@ -1,5 +1,5 @@
 {% set name = "pyhf" %}
-{% set version = "0.5.4" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e5b0d8226bb1a79007cb9ead03f9d6b2ef18b4613f6fda8dda209809ad49164e
+  sha256: bc2923de6f0e90bedc7bd045a1efd70fe576dfe03ba7fa54a1f3ddeba192cbae
 
 build:
   noarch: python
@@ -18,18 +18,18 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
   run:
-    - python
+    - python >=3.7
     - scipy >=1.4.0
-    - click >=6.0
-    - tqdm
+    - click >=7.0
+    - tqdm >=4.56
     - jsonschema >=3.2.0
-    - jsonpatch
-    - pyyaml
+    - jsonpatch >=1.23
+    - pyyaml >=5.1
 
 test:
   imports:
@@ -42,7 +42,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: (partial) pure Python HistFactory implementation
+  summary: pure-Python HistFactory implementation
 
   description: |
     The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
@@ -55,7 +55,7 @@ about:
     of new physics" [arXiv:1007.1727]. The aim is also to support modern
     computational graph libraries such as PyTorch and TensorFlow in order to
     make use of features such as autodifferentiation and GPU acceleration.
-  doc_url: https://scikit-hep.org/pyhf/
+  doc_url: https://pyhf.readthedocs.io/
   dev_url: https://github.com/scikit-hep/pyhf
 
 extra:
