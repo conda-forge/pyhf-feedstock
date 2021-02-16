@@ -10,7 +10,7 @@ source:
   sha256: bc2923de6f0e90bedc7bd045a1efd70fe576dfe03ba7fa54a1f3ddeba192cbae
 
 build:
-  noarch: python
+  noarch: python >=3.7
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -23,7 +23,7 @@ requirements:
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
   run:
-    - python
+    - python >=3.7
     - scipy >=1.4.0
     - click >=7.0
     - tqdm >=4.56
