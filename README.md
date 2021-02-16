@@ -7,11 +7,11 @@ Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyhf-feedstock/blob/master/LICENSE.txt)
 
-Summary: (partial) pure Python HistFactory implementation
+Summary: pure-Python HistFactory implementation
 
 Development: https://github.com/scikit-hep/pyhf
 
-Documentation: https://scikit-hep.org/pyhf/
+Documentation: https://pyhf.readthedocs.io/
 
 The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
 of its implementation in ROOT and sometimes, it's useful to be able to run
@@ -130,8 +130,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bdice](https://github.com/bdice/)
+* [@matthewfeickert](https://github.com/matthewfeickert/)
 * [@kratsg](https://github.com/kratsg/)
 * [@lukasheinrich](https://github.com/lukasheinrich/)
-* [@matthewfeickert](https://github.com/matthewfeickert/)
+* [@bdice](https://github.com/bdice/)
 
