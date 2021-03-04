@@ -17,7 +17,7 @@ The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
 of its implementation in ROOT and sometimes, it's useful to be able to run
 statistical analysis outside of ROOT, RooFit, RooStats framework.
 
-This repo is a pure-Python implementation of that statistical model for
+This repo is a pure-python implementation of that statistical model for
 multi-bin histogram-based analysis and its interval estimation is based on
 the asymptotic formulas of "Asymptotic formulae for likelihood-based tests
 of new physics" [arXiv:1007.1727]. The aim is also to support modern
@@ -122,15 +122,15 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
 =====================
 
-* [@matthewfeickert](https://github.com/matthewfeickert/)
 * [@kratsg](https://github.com/kratsg/)
 * [@lukasheinrich](https://github.com/lukasheinrich/)
+* [@matthewfeickert](https://github.com/matthewfeickert/)
 
