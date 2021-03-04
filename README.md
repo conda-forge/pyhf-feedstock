@@ -133,5 +133,4 @@ Feedstock Maintainers
 * [@matthewfeickert](https://github.com/matthewfeickert/)
 * [@kratsg](https://github.com/kratsg/)
 * [@lukasheinrich](https://github.com/lukasheinrich/)
-* [@bdice](https://github.com/bdice/)
 
