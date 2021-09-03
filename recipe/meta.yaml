@@ -24,11 +24,11 @@ requirements:
     - setuptools_scm_git_archive >=1.0
   run:
     - python >=3.7
-    - scipy >=1.4.0
+    - scipy >=1.4.1
     - click >=7.0
-    - tqdm >=4.56
-    - jsonschema >=3.2.0
-    - jsonpatch >=1.23
+    - tqdm >=4.56.0
+    - jsonschema >=3.0.0
+    - jsonpatch >=1.15
     - pyyaml >=5.1
 
 test:
