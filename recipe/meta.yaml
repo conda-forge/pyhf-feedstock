@@ -20,8 +20,8 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - setuptools_scm[toml] >=3.4
-    - setuptools_scm_git_archive >=1.0
+    - setuptools >=61.0.0
+    - setuptools_scm >=7.0.1
   run:
     - python >=3.7
     - scipy >=1.4.1
