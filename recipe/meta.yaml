@@ -30,6 +30,8 @@ requirements:
     - jsonschema >=4.15.0
     - jsonpatch >=1.15
     - pyyaml >=5.1
+    - importlib_resources >=1.4.0   # python < 3.9
+    - typing_extensions >=3.7.4.3   # python < 3.8
 
 test:
   imports:
