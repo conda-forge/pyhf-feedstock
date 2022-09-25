@@ -24,10 +24,10 @@ requirements:
     - setuptools_scm >=7.0.1
   run:
     - python >=3.7
-    - scipy >=1.4.1
-    - click >=7.0
+    - scipy >=1.2.0
+    - click >=8.0.0
     - tqdm >=4.56.0
-    - jsonschema >=3.0.0
+    - jsonschema >=4.15.0
     - jsonpatch >=1.15
     - pyyaml >=5.1
 
