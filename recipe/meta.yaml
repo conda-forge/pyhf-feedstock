@@ -20,8 +20,8 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - setuptools >=61.0.0
-    - setuptools_scm >=7.0.1
+    - hatchling >=1.13.0
+    - hatch-vcs >=0.3.0
   run:
     - python >=3.7
     - scipy >=1.2.0
