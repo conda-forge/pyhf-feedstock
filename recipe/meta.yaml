@@ -23,13 +23,6 @@ requirements:
     - hatchling >=1.13.0
     - hatch-vcs >=0.3.0
   run:
-    - iminuit
-    - jax
-    - matplotlib
-    - pytorch
-    - tensorflow
-    - tensorflow-probability
-    - uproot
     - python >=3.7
     - scipy >=1.2.0
     - click >=8.0.0
