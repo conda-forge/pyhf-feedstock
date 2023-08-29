@@ -38,7 +38,7 @@ test:
   imports:
     - pyhf
   commands:
-    - {{ PYTHON }} -m pip check
+    - pip check
     - pyhf --version
   requires:
     - pip
