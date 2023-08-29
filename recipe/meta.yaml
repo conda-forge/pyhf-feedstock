@@ -40,6 +40,7 @@ test:
   commands:
     - pip check
     - pyhf --version
+    - pyhf --help
   requires:
     - pip
 
