@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyhf = pyhf.cli:cli
@@ -38,7 +38,11 @@ test:
   imports:
     - pyhf
   commands:
+    - pip check
     - pyhf --version
+    - pyhf --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/scikit-hep/pyhf
