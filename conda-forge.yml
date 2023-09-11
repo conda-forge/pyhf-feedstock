@@ -4,6 +4,6 @@ github:
   tooling_branch_name: main
 bot:
   # https://conda-forge.org/docs/maintainer/conda_forge_yml.html#bot
-  inspection: update-all
+  inspection: hint
 conda_build:
   pkg_format: '2'
