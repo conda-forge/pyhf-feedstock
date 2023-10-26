@@ -1,5 +1,5 @@
 {% set name = "pyhf" %}
-{% set version = "0.7.4" %}
+{% set version = "0.7.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 92c148ec1e07b04a72d60a2d7ac9202c92813c453daa9a443e05485e02c88ee3
+  sha256: 83a73f1f662c5be3aa15126351eb29c5154c000d87e2a5d9f0f9f9df20b1c28c
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyhf = pyhf.cli:cli
