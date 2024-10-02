@@ -6,15 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyhf-{{ version }}.tar.gz
   sha256: d41d9cdce5555863a77a37efd0784ad81d84b817295aa07ebc1cfa5ec50cc78c
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyhf = pyhf.cli:cli
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 2
 
 requirements:
   host:
@@ -60,8 +60,9 @@ about:
     multi-bin histogram-based analysis and its interval estimation is based on
     the asymptotic formulas of "Asymptotic formulae for likelihood-based tests
     of new physics" [arXiv:1007.1727]. The aim is also to support modern
-    computational graph libraries such as PyTorch and TensorFlow in order to
-    make use of features such as autodifferentiation and GPU acceleration.
+    computational graph libraries such as PyTorch, JAX, and TensorFlow in order
+    to make use of features such as automatic differentiation and GPU
+    acceleration.
   doc_url: https://pyhf.readthedocs.io/
   dev_url: https://github.com/scikit-hep/pyhf
 
