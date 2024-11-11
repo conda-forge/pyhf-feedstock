@@ -14,16 +14,16 @@ build:
   entry_points:
     - pyhf = pyhf.cli:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - hatchling >=1.13.0
     - hatch-vcs >=0.3.0
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy >=1.2.0
     - click >=8.0.0
     - tqdm >=4.56.0
@@ -42,6 +42,7 @@ test:
     - pyhf --version
     - pyhf --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
@@ -71,3 +72,4 @@ extra:
     - matthewfeickert
     - lukasheinrich
     - kratsg
+    - conda-forge/scikit-hep
