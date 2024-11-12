@@ -1,5 +1,6 @@
 {% set name = "pyhf" %}
 {% set version = "0.7.6" %}
+{% set python_min = "3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +15,7 @@ build:
   entry_points:
     - pyhf = pyhf.cli:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 4
 
 requirements:
   host:
