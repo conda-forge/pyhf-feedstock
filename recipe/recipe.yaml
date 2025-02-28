@@ -1,58 +1,62 @@
-{% set name = "pyhf" %}
-{% set version = "0.7.6" %}
-{% set python_min = "3.7" %}
+schema_version: 1
+
+context:
+  name: pyhf
+  version: 0.7.6
+  python_min: 3.7
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyhf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyhf-${{ version }}.tar.gz
   sha256: d41d9cdce5555863a77a37efd0784ad81d84b817295aa07ebc1cfa5ec50cc78c
 
 build:
+  number: 6
   noarch: python
-  entry_points:
-    - pyhf = pyhf.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - pyhf = pyhf.cli:cli
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - hatchling >=1.13.0
     - hatch-vcs >=0.3.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - scipy >=1.2.0
     - click >=8.0.0
     - tqdm >=4.56.0
     - jsonschema >=4.15.0
     - jsonpatch >=1.15
     - pyyaml >=5.1
-    - importlib_resources >=1.4.0   # python < 3.9
-    - typing_extensions >=3.7.4.3   # python < 3.8
+    - importlib_resources >=1.4.0  # python < 3.9
+    - typing_extensions >=3.7.4.3  # python < 3.8
     - numpy  # compatible versions controlled through scipy
 
-test:
-  imports:
-    - pyhf
-  commands:
-    - pip check
-    - pyhf --version
-    - pyhf --help
-  requires:
-    - python {{ python_min }}
-    - pip
+tests:
+  - python:
+      imports:
+        - pyhf
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+    script:
+      - pyhf --version
+      - pyhf --help
 
 about:
-  home: https://github.com/scikit-hep/pyhf
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
   summary: pure-Python HistFactory implementation
-
   description: |
     The HistFactory p.d.f. template [CERN-OPEN-2012-016] is per-se independent
     of its implementation in ROOT and sometimes, it's useful to be able to run
@@ -65,8 +69,9 @@ about:
     computational graph libraries such as PyTorch, JAX, and TensorFlow in order
     to make use of features such as automatic differentiation and GPU
     acceleration.
-  doc_url: https://pyhf.readthedocs.io/
-  dev_url: https://github.com/scikit-hep/pyhf
+  homepage: https://github.com/scikit-hep/pyhf
+  repository: https://github.com/scikit-hep/pyhf
+  documentation: https://pyhf.readthedocs.io/
 
 extra:
   recipe-maintainers:
