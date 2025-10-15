@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: pyhf
-  version: 0.7.6
-  python_min: 3.7
+  version: "0.7.6"
+  python_min: "3.7"
 
 package:
   name: ${{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: d41d9cdce5555863a77a37efd0784ad81d84b817295aa07ebc1cfa5ec50cc78c
 
 build:
-  number: 6
+  number: 7
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -29,7 +29,8 @@ requirements:
     - hatch-vcs >=0.3.0
   run:
     - python >=${{ python_min }}
-    - scipy >=1.2.0
+    # c.f. https://github.com/scikit-hep/pyhf/pull/2618
+    - scipy >=1.2.0,!=1.16.0,!=1.16.1,!=1.16.2
     - click >=8.0.0
     - tqdm >=4.56.0
     - jsonschema >=4.15.0
