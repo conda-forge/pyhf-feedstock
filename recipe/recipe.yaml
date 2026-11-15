@@ -10,7 +10,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyhf-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pyhf-${{ version }}.tar.gz
   sha256: db5eac7cd636fca3e5ccb4c286236c9e5f111825248c9e20b994710143464752
 
 build:
