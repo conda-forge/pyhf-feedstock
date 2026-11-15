@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyhf
-  version: "0.7.6"
+  version: "0.8.0"
   python_min: "3.7"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyhf-${{ version }}.tar.gz
-  sha256: d41d9cdce5555863a77a37efd0784ad81d84b817295aa07ebc1cfa5ec50cc78c
+  sha256: db5eac7cd636fca3e5ccb4c286236c9e5f111825248c9e20b994710143464752
 
 build:
-  number: 7
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
